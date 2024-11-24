@@ -1,6 +1,6 @@
 :root {
-  --position: 0%;
-  --radius: 10%;
+  --position: 0;
+  --raduius: 0;
 }
 * {
   margin: 0;
@@ -18,7 +18,6 @@
   h1 {
     color: white;
   }
-  border: white solid 1px;
 }
 
 .cssSlider {
@@ -36,13 +35,18 @@
   }
 
   .row {
-    width: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
     .box {
       width: 150px;
       height: 150px;
+      transform: translateX(var(--position));
+      transition: width;
       position: relative;
-      left: var(--position);
-      border-radius: var(--radius);
+      /* left: var(--positionFront); */
+      border-radius: var(--raduius);
       background-color: #162dc3;
     }
   }

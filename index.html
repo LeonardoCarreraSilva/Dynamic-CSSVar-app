@@ -7,8 +7,7 @@
   <title>Dynamic CSS var APP</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-  
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -19,9 +18,9 @@
   <div class="cssSlider">
     <div class="slideItem">
       <p>position:</p>
-      <input type="range" min="0" max="100" value="0">
-      <p>Radios:</p>
-      <input type="range" min="0" max="100" value="0">
+      <input type="range" min="0" max="100" value="0" id="position" onchange="changeValue('position', this.value)">
+      <p>Raduius:</p>
+      <input type="range" min="0" max="100" value="0" id="raduius" onchange="changeValue('raduius', this.value)">
     </div>
     <div class="row">
       <div class="box"></div>

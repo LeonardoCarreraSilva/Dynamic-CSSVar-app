@@ -1,4 +1,6 @@
-console.log(document.styleSheets[0]);
-var declaration = document.styleSheets[0].cssRules[0].style;
-var propvalue = declaration.getPropertyValue("color");
-
+const root = document.documentElement;
+function changeValue(id, value) {
+  const suffix = (id != 'color' ? '%' : '');
+  root.style.setProperty(`--${id}`, value + suffix);
+  console.log(value + suffix)
+}
