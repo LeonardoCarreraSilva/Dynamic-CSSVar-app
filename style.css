@@ -1,12 +1,13 @@
 :root {
   --position: 0;
-  --raduius: 0;
+  --radius: 0;
+  --color: #fff;
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #000;
+  background-color: #2d2d2d;
 }
 
 .header {
@@ -29,7 +30,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 1.5rem;
-    p {
+    label {
       color: white;
     }
   }
@@ -39,15 +40,15 @@
     display: flex;
     justify-content: center;
     margin-top: 1.5rem;
-    .box {
-      width: 150px;
-      height: 150px;
-      transform: translateX(var(--position));
-      transition: width;
-      position: relative;
-      /* left: var(--positionFront); */
-      border-radius: var(--raduius);
-      background-color: #162dc3;
-    }
   }
+}
+
+
+.box {
+  transform: translateX(var(--position));
+  background: var(--color);
+  border-radius: var(--radius);
+  width: 100px;
+  height: 100px;
+  transition: width 2s;
 }

@@ -17,10 +17,14 @@
 
   <div class="cssSlider">
     <div class="slideItem">
-      <p>position:</p>
-      <input type="range" min="0" max="100" value="0" id="position" onchange="changeValue('position', this.value)">
-      <p>Raduius:</p>
-      <input type="range" min="0" max="100" value="0" id="raduius" onchange="changeValue('raduius', this.value)">
+      <label for="position">Position</label>
+      <input type="range" name="position" id="position" min="0" max="100" value="0"
+        oninput="changeValue('position', this.value)">
+      <label for="radius">Radius</label>
+      <input type="range" name="radius" id="radius" min="0" max="50" value="0"
+        oninput="changeValue('radius', this.value)">
+      <label for="color">Color</label>
+      <input type="color" name="color" id="color" value="#2E343F" onchange="changeValue('color', this.value)">
     </div>
     <div class="row">
       <div class="box"></div>
